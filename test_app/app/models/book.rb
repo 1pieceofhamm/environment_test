@@ -3,4 +3,6 @@ class Book < ApplicationRecord
     validates :author, presence: true
     validates :price, presence: true
     validates :publish_date, presence: true
+    has_many :users, through: :user_books
+    has_many :user_books
 end
